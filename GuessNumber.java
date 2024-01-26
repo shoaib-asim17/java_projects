@@ -9,34 +9,61 @@ public class GuessNumber{
         
         
         
-        
-        Game gm = new Game();
-        boolean guess = false;
-        while(!guess)
+            
+            Game gm = new Game();
+            boolean guess = false;
+          //  gm.No_Of_Rounds();
+           
+            
+        int i;
+        System.out.println("Enter number of rounds you want to play :: ");
+        Scanner r= new Scanner(System.in);
+        int rounds=r.nextInt();
+        for(i=1;i<=rounds;i++)
         {
-
-            gm.userInput();
-            guess=gm.isCorrect();
-        
-
-        
-
+            
+            int inp=1;
+            while(!guess && inp<=4)
+            {
+                
+                
+    
+                    gm.userInput();
+                    
+                    
+                
+                guess=gm.isCorrect();
+            
+                inp++;
+            
+                
+            }
+            System.out.println("round "+ i +" is completed");
+           
         }
+
+            
+            
         
-    }
+        }
 }
 class Game {
 
     int generated_Random_number;
     int user_number;
     int no_of_guesses=0;
+    
 
     
     void userInput()
     {
-        System.out.println("Enter guess number : ");
-        Scanner sc = new Scanner(System.in);
-         user_number= sc.nextInt();
+    
+        
+
+            System.out.println("Enter guess number : ");
+            Scanner sc = new Scanner(System.in);
+             user_number= sc.nextInt();
+        
         
     }
     
@@ -61,12 +88,52 @@ class Game {
         }
         else if(user_number>generated_Random_number)
         {
-            System.out.println("you guess is too high...");
+            System.out.println("your guess is too high...");
         }
         
         return false;
         
     }
+    // boolean ifWon()
+    // {
+    //     if(isCorrect())
+    //     {
+    //         System.out.println("You won the game");
+    //         System.out.println("want to play again or exit ? : ");
+    //         System.out.println(" press 1 for play again");
+    //         System.out.println("press 2 for exit");
+    //         Scanner in = new Scanner(System.in);
+    //         int key=in.nextInt();
+    //         while (1) {
+                
+    //             switch (key) {
+    //                 case 1:
+                        
+    //                     break;
+                
+    //                 default:
+    //                     break;
+    //             }
+    //         }
+
+    //     }
+    // }
+    // void No_Of_Rounds()
+    // {
+    //     int i;
+    //     System.out.println("Enter number of rounds you want to play :: ");
+    //     Scanner r= new Scanner(System.in);
+    //     int rounds=r.nextInt();
+    //     for(i=1;i<=rounds;i++)
+    //     {
+            
+    //     }
+
+    
+        
+    // }
+
+
 
 
 }
