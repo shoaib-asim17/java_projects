@@ -94,45 +94,7 @@ class Game {
         return false;
         
     }
-    // boolean ifWon()
-    // {
-    //     if(isCorrect())
-    //     {
-    //         System.out.println("You won the game");
-    //         System.out.println("want to play again or exit ? : ");
-    //         System.out.println(" press 1 for play again");
-    //         System.out.println("press 2 for exit");
-    //         Scanner in = new Scanner(System.in);
-    //         int key=in.nextInt();
-    //         while (1) {
-                
-    //             switch (key) {
-    //                 case 1:
-                        
-    //                     break;
-                
-    //                 default:
-    //                     break;
-    //             }
-    //         }
-
-    //     }
-    // }
-    // void No_Of_Rounds()
-    // {
-    //     int i;
-    //     System.out.println("Enter number of rounds you want to play :: ");
-    //     Scanner r= new Scanner(System.in);
-    //     int rounds=r.nextInt();
-    //     for(i=1;i<=rounds;i++)
-    //     {
-            
-    //     }
-
-    
-        
-    // }
-
+   
 
 
 
