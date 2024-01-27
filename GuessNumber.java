@@ -5,46 +5,33 @@ import java.util.Scanner;
 import java.util.Random;
 public class GuessNumber{
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         
-        
-        
-            
             Game gm = new Game();
             boolean guess = false;
-          //  gm.No_Of_Rounds();
-           
+        
             
-        int i;
-        System.out.println("Enter number of rounds you want to play :: ");
-        Scanner r= new Scanner(System.in);
-        int rounds=r.nextInt();
-        for(i=1;i<=rounds;i++)
-        {
-            
-            int inp=1;
-            while(!guess && inp<=4)
+            int i;
+            System.out.println("Enter number of rounds you want to play :: ");
+            Scanner r= new Scanner(System.in);
+            int rounds=r.nextInt();
+            for(i=1;i<=rounds;i++)
             {
-                
-                
-    
+            
+                int inp=1;
+                while(!guess && inp<=4)
+                {
                     gm.userInput();
-                    
-                    
+                    guess=gm.isCorrect();
+                    inp++;
                 
-                guess=gm.isCorrect();
-            
-                inp++;
-            
-                
-            }
-            System.out.println("round "+ i +" is completed");
+                }
+                System.out.println("round "+ i +" is completed");
            
-        }
+            }
 
             
-            
-        
         }
 }
 class Game {
@@ -53,18 +40,11 @@ class Game {
     int user_number;
     int no_of_guesses=0;
     
-
-    
     void userInput()
     {
-    
-        
-
             System.out.println("Enter guess number : ");
             Scanner sc = new Scanner(System.in);
-             user_number= sc.nextInt();
-        
-        
+            user_number= sc.nextInt();
     }
     
      Game()
